@@ -3,6 +3,7 @@ alias cfhost="_ nano /etc/hosts"
 alias gcmm='git commit -m "$1" -m "$2"' # commit with double message
 alias gacmm='git add . && gcmm' # commit with double messages only if it can stage all the files
 alias search_folder='f(){ find / -type d -name "$1" 2> /dev/null;  unset -f f; }; f'
+alias gss='git stash push --staged' # Stash only staged files without comments
 
 # Sys
 alias -='cd -'
