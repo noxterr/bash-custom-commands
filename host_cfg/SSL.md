@@ -34,6 +34,18 @@ Specify whether to receive emails from EFF.
 
 If prompted, choose whether to redirect HTTP traffic to HTTPS – 1 (no redirect, no further changes to the server) or 2 (redirect all HTTP requests to HTTPS).
 
+### Deleting a certificate
+
+To delete a certificate, run
+
+```bash
+sudo certbot delete --cert-name YOUR_EXAMPLE_DOMAIN
+```
+
+Remember that this will remove the certificate files but not change apache's configuration. HTTPS will break and is up to you to change `YOUR_EXAMPLE_DOMAIN.conf` and `YOUR_EXAMPLE_DOMAIN-le-ssl.conf` in order
+to fix the routing and configuration
+
+
 #### Renewal, troubleshooting or errors
 
 In case certbot may prompt an error, or the cerbot apache configurations fails, you'd probably need to install some missing packages. Try running those commands:
